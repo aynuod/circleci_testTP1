@@ -34,6 +34,7 @@ jobs:
       - run:
           name: Run Python script
           command: |
+            pip install pymongo
             python tests/integration_tests.py
   connection_tests:
     docker:
