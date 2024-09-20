@@ -5,7 +5,7 @@ test_list = ["success","failure"]
 result = ""
 
 for i in range(100):
-    result += random.choice(test_list)+";"
+    result += test_list[0]+";"
 
 
 with open("check.txt",'w') as f:

@@ -1,5 +1,5 @@
 {
  "unit_test": "failed",
- "integration_test": "passed",
+ "integration_test": "failed",
  "connection_test": "failed"
 }
