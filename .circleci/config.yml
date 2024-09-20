@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Run Python script
           command: |
-            python test/unit_tests.py
+            python tests/unit_tests.py
   integration_tests:
     docker:
       - image: circleci/python:3.10
@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Run Python script
           command: |
-            python test/integration_tests.py
+            python tests/integration_tests.py
   connection_tests:
     docker:
       - image: circleci/python:3.10
@@ -43,7 +43,7 @@ jobs:
       - run:
           name: Run Python script
           command: |
-            python test/connection_tests.py
+            python tests/connection_tests.py
   report:
     docker:
       - image: circleci/python:3.10
