@@ -6,23 +6,60 @@ jobs:
       - image: circleci/python:3.10
     steps:
       - checkout
-
       - run:
           name: Install pip
           command: python -m ensurepip --upgrade
-
       - run:
           name: Install dependencies
           command: |
             pip install -r requirements.txt
-
       - run:
           name: Run Python script
           command: |
-            python server.py
+            python build/build.py
+  unit_tests:
+    docker:
+      - image: circleci/python:3.10
+    steps:
+      - checkout
+      - run:
+          name: Run Python script
+          command: |
+            python test/unit_tests.py
+  integration_tests:
+    docker:
+      - image: circleci/python:3.10
+    steps:
+      - checkout
+      - run:
+          name: Run Python script
+          command: |
+            python test/integration_tests.py
+  connection_tests:
+    docker:
+      - image: circleci/python:3.10
+    steps:
+      - checkout
+      - run:
+          name: Run Python script
+          command: |
+            python test/connection_tests.py
+  report:
+    docker:
+      - image: circleci/python:3.10
+    steps:
+      - checkout
+      - run:
+          name: Run Python script
+          command: |
+            python report/report.py
 
 workflows:
   version: 2
   build_and_test:
     jobs:
       - build
+      - unit_tests
+      - integration_tests
+      - connection_tests
+      - report

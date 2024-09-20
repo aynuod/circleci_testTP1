@@ -1,3 +1,1 @@
-imad;zajli;root;0;0
-test;test;admin;1;1
-user1;user1;user;10;10
+failure;failure;success;failure;failure;success;failure;success;failure;success;failure;failure;failure;failure;success;success;success;failure;failure;success;success;success;success;failure;success;success;failure;failure;failure;failure;failure;failure;failure;failure;failure;success;success;success;success;failure;failure;success;success;failure;success;failure;failure;failure;success;failure;failure;success;success;failure;failure;failure;success;success;failure;success;success;failure;success;failure;failure;success;success;failure;failure;success;success;success;failure;success;success;failure;failure;failure;success;failure;failure;failure;success;failure;failure;failure;failure;failure;success;failure;failure;failure;failure;success;success;failure;success;failure;success;failure
