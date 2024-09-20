@@ -1,0 +1,28 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.11
+    steps:
+      - checkout
+
+      - run:
+          name: Install pip
+          command: python -m ensurepip --upgrade
+
+      - run:
+          name: Install dependencies
+          command: |
+            pip install -r requirements.txt
+
+      - run:
+          name: Run Python script
+          command: |
+            python server.py
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
